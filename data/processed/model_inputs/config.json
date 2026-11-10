@@ -1,0 +1,369 @@
+{
+  "horizons": [
+    1,
+    3,
+    6
+  ],
+  "window_length": 24,
+  "split": {
+    "train_target_end": "2026-06-30 23:00:00",
+    "val_origin_start": "2026-07-01 00:00:00",
+    "val_target_end": "2026-08-31 23:00:00",
+    "test_origin_start": "2026-09-01 00:00:00"
+  },
+  "alert_threshold_p90_train": 65.0,
+  "alert_threshold_p95_train": 73.0,
+  "sequence_columns": [
+    "y_lag0",
+    "hour_sin",
+    "hour_cos",
+    "dow_sin",
+    "dow_cos",
+    "is_sunday",
+    "is_holiday",
+    "jcount_lag0",
+    "jlen_lag0",
+    "jdelay_lag0",
+    "mdelay_lag0",
+    "tt_lag0",
+    "temperature_2m",
+    "relative_humidity_2m",
+    "cloud_cover",
+    "wind_speed_10m",
+    "precipitation",
+    "is_raining",
+    "rain_3h",
+    "rain_6h",
+    "rain_12h",
+    "rain_24h",
+    "precip_lag1"
+  ],
+  "static_columns": [
+    "t_hour",
+    "t_dow",
+    "t_is_sunday",
+    "t_is_holiday",
+    "t_hour_sin",
+    "t_hour_cos",
+    "t_dow_sin",
+    "t_dow_cos",
+    "same_hour_yday",
+    "same_hour_lastweek"
+  ],
+  "log_transformed_columns": [
+    "jcount_lag0",
+    "jcount_lag1",
+    "jcount_lag3",
+    "jlen_lag0",
+    "jlen_lag1",
+    "jlen_lag3",
+    "jdelay_lag0",
+    "jdelay_lag1",
+    "jdelay_lag3",
+    "precipitation",
+    "rain_3h",
+    "rain_6h",
+    "rain_12h",
+    "rain_24h",
+    "precip_lag1",
+    "w_precip"
+  ],
+  "feature_groups": {
+    "1": {
+      "calendar": [
+        "hour",
+        "day_of_week",
+        "is_sunday",
+        "is_holiday",
+        "hour_sin",
+        "hour_cos",
+        "dow_sin",
+        "dow_cos"
+      ],
+      "monsoon_flag": [
+        "is_monsoon"
+      ],
+      "target_history": [
+        "y_lag0",
+        "y_lag1",
+        "y_lag2",
+        "y_lag3",
+        "y_lag6",
+        "y_lag12",
+        "y_lag24",
+        "y_lag168",
+        "y_mean24",
+        "y_mean168",
+        "y_std24"
+      ],
+      "jam": [
+        "jcount_lag0",
+        "jcount_lag1",
+        "jcount_lag3",
+        "jlen_lag0",
+        "jlen_lag1",
+        "jlen_lag3",
+        "jdelay_lag0",
+        "jdelay_lag1",
+        "jdelay_lag3",
+        "mdelay_lag0",
+        "mdelay_lag1",
+        "mdelay_lag3",
+        "tt_lag0",
+        "tt_lag1",
+        "tt_lag3"
+      ],
+      "weather_basic": [
+        "temperature_2m",
+        "relative_humidity_2m",
+        "cloud_cover",
+        "wind_speed_10m",
+        "precipitation",
+        "is_raining",
+        "rain_3h",
+        "rain_6h",
+        "rain_12h",
+        "rain_24h",
+        "precip_lag1"
+      ],
+      "weather_tempchange": [
+        "temp_change_1h",
+        "temp_change_3h"
+      ],
+      "calendar_target": [
+        "t_hour",
+        "t_dow",
+        "t_is_sunday",
+        "t_is_holiday",
+        "t_hour_sin",
+        "t_hour_cos",
+        "t_dow_sin",
+        "t_dow_cos"
+      ],
+      "history_target_hour": [
+        "same_hour_yday",
+        "same_hour_lastweek"
+      ],
+      "tomtom_benchmark": [
+        "tt_weekago_idx",
+        "tt_hist_traveltime"
+      ],
+      "weather_target_hour_UPPER_BOUND": [
+        "w_precip",
+        "w_is_raining",
+        "w_temp"
+      ]
+    },
+    "3": {
+      "calendar": [
+        "hour",
+        "day_of_week",
+        "is_sunday",
+        "is_holiday",
+        "hour_sin",
+        "hour_cos",
+        "dow_sin",
+        "dow_cos"
+      ],
+      "monsoon_flag": [
+        "is_monsoon"
+      ],
+      "target_history": [
+        "y_lag0",
+        "y_lag1",
+        "y_lag2",
+        "y_lag3",
+        "y_lag6",
+        "y_lag12",
+        "y_lag24",
+        "y_lag168",
+        "y_mean24",
+        "y_mean168",
+        "y_std24"
+      ],
+      "jam": [
+        "jcount_lag0",
+        "jcount_lag1",
+        "jcount_lag3",
+        "jlen_lag0",
+        "jlen_lag1",
+        "jlen_lag3",
+        "jdelay_lag0",
+        "jdelay_lag1",
+        "jdelay_lag3",
+        "mdelay_lag0",
+        "mdelay_lag1",
+        "mdelay_lag3",
+        "tt_lag0",
+        "tt_lag1",
+        "tt_lag3"
+      ],
+      "weather_basic": [
+        "temperature_2m",
+        "relative_humidity_2m",
+        "cloud_cover",
+        "wind_speed_10m",
+        "precipitation",
+        "is_raining",
+        "rain_3h",
+        "rain_6h",
+        "rain_12h",
+        "rain_24h",
+        "precip_lag1"
+      ],
+      "weather_tempchange": [
+        "temp_change_1h",
+        "temp_change_3h"
+      ],
+      "calendar_target": [
+        "t_hour",
+        "t_dow",
+        "t_is_sunday",
+        "t_is_holiday",
+        "t_hour_sin",
+        "t_hour_cos",
+        "t_dow_sin",
+        "t_dow_cos"
+      ],
+      "history_target_hour": [
+        "same_hour_yday",
+        "same_hour_lastweek"
+      ],
+      "tomtom_benchmark": [
+        "tt_weekago_idx",
+        "tt_hist_traveltime"
+      ],
+      "weather_target_hour_UPPER_BOUND": [
+        "w_precip",
+        "w_is_raining",
+        "w_temp"
+      ]
+    },
+    "6": {
+      "calendar": [
+        "hour",
+        "day_of_week",
+        "is_sunday",
+        "is_holiday",
+        "hour_sin",
+        "hour_cos",
+        "dow_sin",
+        "dow_cos"
+      ],
+      "monsoon_flag": [
+        "is_monsoon"
+      ],
+      "target_history": [
+        "y_lag0",
+        "y_lag1",
+        "y_lag2",
+        "y_lag3",
+        "y_lag6",
+        "y_lag12",
+        "y_lag24",
+        "y_lag168",
+        "y_mean24",
+        "y_mean168",
+        "y_std24"
+      ],
+      "jam": [
+        "jcount_lag0",
+        "jcount_lag1",
+        "jcount_lag3",
+        "jlen_lag0",
+        "jlen_lag1",
+        "jlen_lag3",
+        "jdelay_lag0",
+        "jdelay_lag1",
+        "jdelay_lag3",
+        "mdelay_lag0",
+        "mdelay_lag1",
+        "mdelay_lag3",
+        "tt_lag0",
+        "tt_lag1",
+        "tt_lag3"
+      ],
+      "weather_basic": [
+        "temperature_2m",
+        "relative_humidity_2m",
+        "cloud_cover",
+        "wind_speed_10m",
+        "precipitation",
+        "is_raining",
+        "rain_3h",
+        "rain_6h",
+        "rain_12h",
+        "rain_24h",
+        "precip_lag1"
+      ],
+      "weather_tempchange": [
+        "temp_change_1h",
+        "temp_change_3h"
+      ],
+      "calendar_target": [
+        "t_hour",
+        "t_dow",
+        "t_is_sunday",
+        "t_is_holiday",
+        "t_hour_sin",
+        "t_hour_cos",
+        "t_dow_sin",
+        "t_dow_cos"
+      ],
+      "history_target_hour": [
+        "same_hour_yday",
+        "same_hour_lastweek"
+      ],
+      "tomtom_benchmark": [
+        "tt_weekago_idx",
+        "tt_hist_traveltime"
+      ],
+      "weather_target_hour_UPPER_BOUND": [
+        "w_precip",
+        "w_is_raining",
+        "w_temp"
+      ]
+    }
+  },
+  "holidays": [
+    "2025-01-14",
+    "2025-01-26",
+    "2025-02-26",
+    "2025-03-30",
+    "2025-03-31",
+    "2025-04-10",
+    "2025-04-14",
+    "2025-04-18",
+    "2025-04-30",
+    "2025-05-01",
+    "2025-06-07",
+    "2025-07-06",
+    "2025-08-15",
+    "2025-08-27",
+    "2025-09-05",
+    "2025-10-01",
+    "2025-10-02",
+    "2025-10-07",
+    "2025-10-20",
+    "2025-10-22",
+    "2025-11-01",
+    "2025-11-08",
+    "2025-12-25",
+    "2026-01-15",
+    "2026-01-26",
+    "2026-03-02",
+    "2026-03-19",
+    "2026-03-27",
+    "2026-04-03",
+    "2026-04-14",
+    "2026-05-01",
+    "2026-05-27",
+    "2026-06-26",
+    "2026-08-15",
+    "2026-08-26",
+    "2026-09-14",
+    "2026-10-02",
+    "2026-10-20",
+    "2026-10-21"
+  ]
+}

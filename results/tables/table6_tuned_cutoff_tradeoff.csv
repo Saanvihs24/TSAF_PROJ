@@ -1,0 +1,12 @@
+,,F2,F2,cutoff_value,cutoff_value,detected,detected,false_alarm_hrs_per_week,false_alarm_hrs_per_week
+cutoff,,standard,tuned on val,standard,tuned on val,standard,tuned on val,standard,tuned on val
+model,h,,,,,,,,
+"LSTM (core, 3-seed avg)",1,0.88,0.92,65.0,62.0,45.0,45.0,1.23,2.09
+"LSTM (core, 3-seed avg)",3,0.82,0.91,65.0,59.0,41.0,44.0,1.47,3.93
+"LSTM (core, 3-seed avg)",6,0.84,0.88,65.0,58.0,43.0,44.0,1.72,6.51
+SARIMAX,1,0.91,0.94,65.0,62.0,45.0,45.0,0.98,2.21
+SARIMAX,3,0.87,0.92,65.0,61.0,44.0,45.0,1.11,2.95
+SARIMAX,6,0.87,0.87,65.0,59.0,45.0,45.0,2.21,7.49
+XGBoost (core),1,0.91,0.94,65.0,61.0,45.0,45.0,0.98,2.46
+XGBoost (core),3,0.81,0.9,65.0,59.0,42.0,44.0,1.35,4.79
+XGBoost (core),6,0.86,0.88,65.0,58.0,43.0,44.0,1.47,6.02

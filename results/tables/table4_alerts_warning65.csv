@@ -1,0 +1,16 @@
+h,model,episodes found,Precision,Recall,F2,false alarm hrs/week
+1,Typical profile,45/45,0.79,0.87,0.85,3.56
+1,Prophet,45/45,0.8,0.9,0.88,3.56
+1,SARIMAX,45/45,0.94,0.91,0.91,0.98
+1,XGBoost (core),45/45,0.94,0.91,0.91,0.98
+1,"LSTM (core, 3 seeds)",45/45,0.92,0.87,0.88,1.23
+3,Typical profile,45/45,0.79,0.87,0.85,3.56
+3,Prophet,45/45,0.8,0.9,0.88,3.56
+3,SARIMAX,44/45,0.92,0.86,0.87,1.11
+3,XGBoost (core),42/45,0.9,0.79,0.81,1.35
+3,"LSTM (core, 3 seeds)",41/45,0.9,0.81,0.82,1.47
+6,Typical profile,45/45,0.79,0.87,0.85,3.56
+6,Prophet,45/45,0.8,0.9,0.88,3.56
+6,SARIMAX,45/45,0.86,0.87,0.87,2.21
+6,XGBoost (core),43/45,0.9,0.85,0.86,1.47
+6,"LSTM (core, 3 seeds)",43/45,0.88,0.83,0.84,1.72
